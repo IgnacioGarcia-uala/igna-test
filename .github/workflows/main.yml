@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: some
         run: |
-          accountIds: 
+          accountIds=
             mex:
               dev: "1"
               prod: "2"
