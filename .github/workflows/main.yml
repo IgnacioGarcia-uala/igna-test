@@ -26,5 +26,13 @@ jobs:
     steps:
       - name: some
         run: |
-          accountIds: ${{ fromJson('{ mex: { dev: "1", prod: "2" }, arg: { dev: "3", prod: "4" } }') }}
-          echo accountIds
+          accountIds: 
+            mex:
+              dev: "1"
+              prod: "2"
+            arg:
+              dev: "3"
+              prod: "4"
+          
+          echo accountIds[inputs.country][inputs.environment]
+          echo accountIds[${inputs.country}][${inputs.environment}]
