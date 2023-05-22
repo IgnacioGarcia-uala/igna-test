@@ -20,17 +20,8 @@ on:
           - mex
 
 env:
-  ACCOUNT_ID:
-    arg:
-      dev: 146225626944
-      test: 718892725114
-      stage: 557653594106
-      prod: 264394897793
-    mex:
-      dev: 223005233626
-      stage: 741606091064
-      prod: 829345317449
-      
+  ACCOUNT_ID: ${{ fromJson("{\"arg\":{\"dev\":\"1\",\"prod\":\"2\"},\"mex\":{\"dev\":\"3\",\"prod\":\"4\"}}") }}
+  
 jobs:
   test:
     runs-on: ubuntu-latest
