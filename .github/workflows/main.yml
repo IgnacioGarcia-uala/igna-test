@@ -31,4 +31,5 @@ jobs:
     steps:
       - name: some
         run: |
+          echo '${{inputs.country}}_${{inputs.environment}}'
           echo ${{ env['${{inputs.country}}_${{inputs.environment}}'] }}
