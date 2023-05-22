@@ -1,0 +1,30 @@
+name: TEST
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "some"
+        required: true
+        type: choice
+        options:
+          - dev
+          - test
+          - stage
+          - prod
+      country:
+        description: "some"
+        required: true
+        type: choice
+        options:
+          - arg
+          - mex
+
+      
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: some
+        run: |
+          accountIds: ${{ fromJson('{ mex: { dev: "1", prod: "2" }, arg: { dev: "3", prod: "4" } }') }}
+          echo accountIds
