@@ -32,4 +32,4 @@ jobs:
       - name: some
         run: |
           ref= '${{inputs.country}}_${{inputs.environment}}'
-          echo '${{ env['${{ref}}'] }}'
+          echo env[${ref}]
