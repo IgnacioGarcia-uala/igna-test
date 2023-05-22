@@ -20,7 +20,10 @@ on:
           - mex
 
 env:
-  ACCOUNT_ID: ${{ fromJson("{'arg':{'dev':'1','prod':'2'},'mex':{'dev':'3','prod':'4'}}") }}
+  arg_dev: "1"
+  arg_prod: "2"
+  mex_dev: "3"
+  mex_prod: "4"
   
 jobs:
   test:
@@ -28,5 +31,4 @@ jobs:
     steps:
       - name: some
         run: |
-          echo env.accountIds[inputs.country][inputs.environment]
-          echo env.accountIds[${inputs.country}][${inputs.environment}]
+          echo ${{ env['${{inputs.country}}_${{inputs.environment}}'] }}
