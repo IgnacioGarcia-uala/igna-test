@@ -31,4 +31,6 @@ jobs:
     steps:
       - name: some
         run: |
-          echo env[${{inputs.country}}_${{inputs.environment}}]
+          echo ${{inputs.country}}_${{inputs.environment}}
+          echo ${{env[arg_dev]}}
+          echo ${{ env[${{inputs.country}}_${{inputs.environment}}] }}
