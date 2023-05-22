@@ -31,5 +31,4 @@ jobs:
     steps:
       - name: some
         run: |
-          ref= '${{inputs.country}}_${{inputs.environment}}'
-          echo env.$ref
+          echo env[${{inputs.country}}_${{inputs.environment}}]
