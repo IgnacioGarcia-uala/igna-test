@@ -32,5 +32,5 @@ jobs:
       - name: some
         run: |
           echo ${{inputs.country}}_${{inputs.environment}}
-          echo ${{env[arg_dev]}}
-          echo ${{ env[${{inputs.country}}_${{inputs.environment}}] }}
+          echo ${{env['arg_dev']}}
+          echo ${{ env['${{inputs.country}}_${{inputs.environment}}'] }}
