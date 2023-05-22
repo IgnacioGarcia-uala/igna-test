@@ -20,7 +20,7 @@ on:
           - mex
 
 env:
-  ACCOUNT_ID: ${{ fromJson("{\"arg\":{\"dev\":\"1\",\"prod\":\"2\"},\"mex\":{\"dev\":\"3\",\"prod\":\"4\"}}") }}
+  ACCOUNT_ID: ${{ fromJson("{'arg':{'dev':'1','prod':'2'},'mex':{'dev':'3','prod':'4'}}") }}
   
 jobs:
   test:
