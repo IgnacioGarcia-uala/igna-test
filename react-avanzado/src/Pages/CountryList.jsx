@@ -1,15 +1,19 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { CountryCard } from '../Components/CountryCard';
+import { useFetch } from '../hooks/useFetch';
 
 export const CountryList = () => {
+  const { body, loading, error } = useFetch("https://restcountries.com/v3.1/all")
+
   return (
     <>
-      <div>CountryList</div>
+    {
+      loading? "Cargando..." :
+      error != null? `Error ${error}` :
       <ul>
-        <li><Link to={`country/1`}>1</Link></li>
-        <li><Link to={`country/2`}>2</Link></li>
-        <li><Link to={`country/3`}>3</Link></li>
+        { body.map(c => <CountryCard c={c} />) }
       </ul>
+    }
     </>
   )
 }

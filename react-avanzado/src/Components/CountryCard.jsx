@@ -1,7 +1,13 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
-export const CountryCard = () => {
+export const CountryCard = ({c}) => {
+
   return (
-    <div>CountryCard</div>
+    <li>
+      <Link to={`country/${c?.name?.common}`}>
+          {c?.name?.common}
+      </Link>
+    </li>
   )
 }

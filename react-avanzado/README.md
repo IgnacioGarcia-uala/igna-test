@@ -6,14 +6,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Todo List
 - [x] React Router
-- [] Componentes
+- [x] Componentes
 - [] useReducer
 - [] useContext
-- [] custom hook
+- [x] custom hook
 
 Pages
-- [] Country List
-- [] Country Detail
+- [x] Country List
+- [x] Country Detail
 - [] About
 - [] DarkTheme
 
