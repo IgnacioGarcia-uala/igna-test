@@ -15,7 +15,10 @@ export const CountryList = () => {
     if (!loading && body) {
       if (inpState.length === 0) setListState(body)
       else if (inpState.length >= 2) {
-        setListState(body.filter(e => e?.name?.common.toLowerCase().includes(inpState.toLowerCase())))
+        setListState(body.filter(e => 
+          e?.name?.common?.toLowerCase().includes(inpState.toLowerCase()) || 
+          e?.translations?.spa?.common?.toLowerCase().includes(inpState.toLowerCase())
+        ))
       }
     }
   }, [inpState, body, loading])
