@@ -6,6 +6,7 @@ export const CountryCard = ({c}) => {
   return (
     <li>
       <Link to={`country/${c?.name?.common}`}>
+          <img src={c?.flags?.png} alt={c?.flags?.alt} style={{maxHeight: 200}}/>
           {c?.name?.common}
       </Link>
     </li>
