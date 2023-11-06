@@ -22,7 +22,7 @@ export const Country = () => {
           <>
             <p>Capital/es:</p>
             <ul>
-              {body[0]?.capital?.map(e => <li>{e}</li> )}
+              {body[0]?.capital?.map(e => <li key={`capital-${e}`}>{e}</li> )}
             </ul>
           </> : ""
         }
@@ -35,7 +35,7 @@ export const Country = () => {
           <>
             <p>Limitrofe con</p>
             <ul>
-              {body[0]?.borders?.map(e => <li>{e}</li>)}
+              {body[0]?.borders?.map(e => <li key={`border-${e}`}>{e}</li>)}
             </ul>
           </> : ""
         }
@@ -48,7 +48,7 @@ export const Country = () => {
           <>
             <p>Idioma/s</p>
             <ul>
-              {Object.keys(body[0]?.languages).map(k => <li>{body[0]?.languages[k]}</li>)}
+              {Object.keys(body[0]?.languages).map(k => <li key={`lang-${k}`}>{body[0]?.languages[k]}</li>)}
             </ul>
           </> : ""
         }

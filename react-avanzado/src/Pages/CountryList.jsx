@@ -31,7 +31,7 @@ export const CountryList = () => {
       loading? "Cargando..." :
       error != null? `Error ${error}` :
       <ul>
-        { listState.map(c => <CountryCard c={c} />) }
+        { listState.map(c => <CountryCard c={c} key={c?.name?.common}/>) }
       </ul>
     }
     </>
