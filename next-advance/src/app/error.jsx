@@ -1,6 +1,4 @@
-'use client';
-
-import React from 'react'
+'use client'
 
 export default function Error({
     error,
@@ -8,8 +6,8 @@ export default function Error({
 }) {
   return (
     <div>
-        <p>Ups</p>
-        <p>{error}</p>
+        <h2>Ups</h2>
+        <p>{error.message}</p>
     </div>
   )
 }
